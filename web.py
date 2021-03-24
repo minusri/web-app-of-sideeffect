@@ -24,13 +24,13 @@ def home():
 @app.route('/predict',methods=['POST'])
 
 def predict():
-    Age=str(request.form['Age'])
-    Condition=str(request.form['Condition'])
-    Drug=str(request.form['Drug'])
-    EaseofUse=float(request.form['EaseofUse'])
-    effectiveness=int(request.form['Effectiveness'])
-    Sex=str(request.form['Sex'])
-    predictinput=['Age','Condition','Drug','EaseofUse','effectiveness','Sex']
+    age=str(request.form['Age'])
+    condition=str(request.form['Condition'])
+    drug=str(request.form['Drug'])
+    easeofUse=float(request.form['EaseofUse'])
+    Effectiveness=int(request.form['Effectiveness'])
+    sex=str(request.form['Sex'])
+    predictinput=[age,condition,drug,easeofUse,Effectiveness,sex]
    # pickle_in=open("dict_pickle.pkl","rb")
     test=predictinput
     test = LE.fit_transform(test)
